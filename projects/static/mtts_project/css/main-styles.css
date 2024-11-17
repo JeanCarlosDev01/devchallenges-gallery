@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --color-light-pink: #FFFEFE;  /* Light Pink */
+    --color-gray-light: #F3F4F6;   /* Light Gray */
+    --color-dark-gray: #394150;     /* Dark Gray */
+    --color-black: #000000;         /* Black */
+    --color-blue: #3662E3;          /* Bright Blue */
+    --color-teal: #86E7D4;          /* Light Teal */
+    --color-sky-blue: #9DC4F8;      /* Sky Blue */
+    --color-lavender: #C1B6F8;      /* Lavender */
+    --color-pink: #EDACD2;          /* Soft Pink */
+    --color-beige: #F8D8B0;         /* Beige */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro", serif;;
+}
+
+body {
+    margin: 5%;
+}
+
+.section-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas: 
+        'text text img1 img2'
+        'link img3 img4 img5';
+    background-color: var(--color-gray-light);
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80%;
+    z-index: 0;
+}
+
+.background-image img {
+    height: 80%;
+}
+
+.section-text {
+    grid-area: text;
+    padding: 5%;
+    position: absolute;
+}
+
+.section-text .text {
+    color: var(--color-blue);
+    font-size: 1rem;
+    padding: .5rem 0;
+}
+
+.section-text .title {
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+
+.section-text .paragraph {
+    color: var(--color-dark-gray);
+    font-size: 1rem;
+    padding: .5rem 5rem 0 0;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.image-container .background-gradient {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    z-index: 5;
+}
+
+.image-container .background-gradient img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container .person-image {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    z-index: 0;
+}
+
+
+.image-container .person-image {
+    width: 100%;
+}
+
+.image-container .info {
+    position: absolute;
+    bottom: 0;
+    padding: 1.25rem;
+    z-index: 10;
+    color: var(--color-gray-light);
+}
+
+.image-container .info .name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.image-container .info .occupation {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.image1 {
+    grid-area: img1;
+    background-color: var(--color-lavender);
+}
+
+.image2 {
+    grid-area: img2;
+    background-color: var(--color-pink);
+}
+
+.image3 {
+    grid-area: img3;
+    background-color: var(--color-sky-blue);
+}
+
+.image4 {
+    grid-area: img4;
+    background-color: var(--color-beige);
+}
+
+.image5 {
+    grid-area: img5;
+    background-color: var(--color-teal);
+}
+
+.link-container {
+    grid-area: link;
+    position: relative;
+    padding: 10%;
+}
+
+.link-container a {
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--color-dark-gray);
+    font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .section-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+            'text text text'
+            'img1 img2 img3'
+            'link img4 img5';
+    }
+
+    .paragraph {
+        margin-right: 30%;
+    }
+}
+
+@media (max-width: 640px) {
+    .section-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            'text text'
+            'img1 img2'
+            'img3 img4'
+            'link img5';
+    }
+
+    .paragraph {
+        margin-right: 0;
+    }
+}

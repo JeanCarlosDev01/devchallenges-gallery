@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Added stylesheet -->
+    <link rel="stylesheet" href="{% static 'mtts_project/css/main-styles.css' %}">
+
+    <title>Meet the Team Section</title>
+</head>
+<body>
+    <main class="section-container">
+        <div class="background-image">
+            <img src="{% static 'mtts_project/assets/Background_decor.svg' %}" alt="">
+        </div>
+        <div class="section-text">
+            <p class="text">Our team</p>
+            <h1 class="title">Meet the brain</h1>
+            <p class="paragraph">We are proud to have them as part of our community and look forward to continuing to push the boundaries of what's possible in the world of digital art.</p>
+        </div>
+        <div class="image-container image1">
+            <div class="background-gradient">
+                <img src="{% static 'mtts_project/assets/Gradient.svg' %}" alt="Image backgroun gradient">
+            </div>
+            <div class="person-image">
+                <img src="{% static 'mtts_project/assets/person_1.png' %}" alt="Image person 1">
+            </div>
+            <div class="info">
+                <p class="name">Liam Novak</p>
+                <p class="occupation">Software Engineer</p>
+            </div>
+        </div>
+        <div class="image-container image2">
+            <div class="background-gradient">
+                <img src="{% static 'mtts_project/assets/Gradient.svg' %}" alt="Image backgroun gradient">
+            </div>
+            <div class="person-image">
+                <img src="{% static 'mtts_project/assets/person_2.png' %}" alt="Image person 2">
+            </div>
+            <div class="info">
+                <p class="name">Sophia Moretti</p>
+                <p class="occupation">Business Development Manager</p>
+            </div>
+        </div>
+        <div class="link-container">
+            <a href="#">See all members
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.3333 4H4.66667C4.26667 4 4 4.26667 4 4.66667C4 5.06667 4.26667 5.33333 4.66667 5.33333H9.73333L4.2 10.8667C3.93333 11.1333 3.93333 11.5333 4.2 11.8C4.46667 12.0667 4.86667 12.0667 5.13333 11.8L10.6667 6.26667V11.3333C10.6667 11.7333 10.9333 12 11.3333 12C11.7333 12 12 11.7333 12 11.3333V4.66667C12 4.26667 11.7333 4 11.3333 4Z" fill="#394150"/>
+                </svg>
+            </a>
+        </div>
+        <div class="image-container image3">
+            <div class="background-gradient">
+                <img src="{% static 'mtts_project/assets/Gradient.svg' %}" alt="Image backgroun gradient">
+            </div>
+            <div class="person-image">
+                <img src="{% static 'mtts_project/assets/person_3.png' %}" alt="Image person 3">
+            </div>
+            <div class="info">
+                <p class="name">Ethan Rossi</p>
+                <p class="occupation">Business Development Manager</p>
+            </div>
+        </div>
+        <div class="image-container image4">
+            <div class="background-gradient">
+                <img src="{% static 'mtts_project/assets/Gradient.svg' %}" alt="Image backgroun gradient">
+            </div>
+            <div class="person-image">
+                <img src="{% static 'mtts_project/assets/person_4.png' %}" alt="Image person 4">
+            </div>
+            <div class="info">
+                <p class="name">Isabella Ricci</p>
+                <p class="occupation">UX Designer</p>
+            </div>
+        </div>
+        <div class="image-container image5">
+            <div class="background-gradient">
+                <img src="{% static 'mtts_project/assets/Gradient.svg' %}" alt="Image backgroun gradient">
+            </div>
+            <div class="person-image">
+                <img src="{% static 'mtts_project/assets/person_5.png' %}" alt="Image person 5">
+            </div>
+            <div class="info">
+                <p class="name">Noah Conti</p>
+                <p class="occupation">Content Creator</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

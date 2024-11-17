@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Added styles -->
+    <link rel="stylesheet" href="{% static 'dsc_project/css/main-styles.css' %}">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="image-background">
+        <img src="{% static 'dsc_project/assets/background-image.png' %}" alt="background image">
+    </div>
+    <header class="header-container">
+        <h1>Checkout</h1>
+        <p>3 ITEMS</p>
+    </header>
+    <main class="sections-container">
+        <div class="products">
+            <div class="list">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="{% static 'dsc_project/assets/Gold.png' %}" alt="phone gold">
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <p class="product-name">iPhone 12 Pro</p>
+                            <p class="product-color">Golden</p>
+                        </div>
+                        <p class="product-price">$999.00</p>
+                    </div>
+                    <div class="product-ammount">
+                        <p class="ammount">x 1</p>
+                        <button class="btn-remove-product">x</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="{% static 'dsc_project/assets/Blue.png' %}" alt="phone gold">
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <p class="product-name">Apple Watch</p>
+                            <p class="product-color">Blue</p>
+                        </div>
+                        <p class="product-price">$399.00</p>
+                    </div>
+                    <div class="product-ammount">
+                        <p class="ammount">x 1</p>
+                        <button class="btn-remove-product">x</button>
+                    </div>
+                </div>
+    
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="{% static 'dsc_project/assets/iMac=Front 1.png' %}" alt="phone gold">
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <p class="product-name">iMac</p>
+                            <p class="product-color">Green</p>
+                        </div>
+                        <p class="product-price">$1199.00</p>
+                    </div>
+                    <div class="product-ammount">
+                        <p class="ammount">x 1</p>
+                        <button class="btn-remove-product">x</button>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <div class="coupon-form">
+                    <input type="text" placeholder="Enter coupon code">
+                    <input type="button" value="Apply Coupon">
+                </div>
+
+                <div class="total-info">
+                    <ul>
+                        <li class="sub-total">
+                            <p>Sub total</p>
+                            <p>$2597.00</p>
+                        </li>
+                        <li class="tax">
+                            <p>Tax</p>
+                            <p>$623.28</p>
+                        </li>
+                        <li class="total">
+                            <p>Total</p>
+                            <p>$3220.28</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form">
+            <p class="title">Contact Information</p>
+            <div class="form-container">
+                <form>
+                    <div class="input-container">
+                        <label for="name">First & Last name</label>
+                        <input id="name" type="text" placeholder="Enter first & last name">
+                    </div>
+                    <div class="input-container">
+                        <label for="name">Email Address</label>
+                        <input id="name" type="text" placeholder="Enter email address">
+                    </div>
+                    <div class="location-inputs">
+                        <div class="country">
+                            <label for="country">Country</label>
+                            <select name="country" id="country">
+                                <option value="Finland">Finland</option>
+                            </select>
+                        </div>
+                        <div class="postal-code">
+                            <label for="postal">Postal Code</label>
+                            <input type="text" placeholder="00270">
+                        </div>
+                    </div>
+                    <input class="form-btn" type="submit" value="Continue">
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

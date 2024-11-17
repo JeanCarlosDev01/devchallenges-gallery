@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Article Listing</title>
+
+    <!-- Added styles sheet -->
+    <link rel="stylesheet" href="{% static 'sal_project/css/main-styles.css' %}">
+</head>
+<body>
+    <header class="header-container">
+        <h1 class="header-title">We release interesting articles about technology</h1>
+        <div class="header-separator">
+            <img src="{% static 'sal_project/assets/Seperator.svg' %}" alt="Image separator">
+        </div>    
+    </header>
+    <main class="articles-container">
+        <div class="article">
+            <div class="article-image">
+                <img src="{% static 'sal_project/assets/photo_1.png' %}" alt="Article 1 image">
+            </div>
+            <div class="article-info">
+                <h2 class="article-title">Unlocking the Power of Cloud Computing</h2>
+                <p class="article-date">November 12, 2024</p>
+            </div>
+        </div>
+        <div class="article">
+            <div class="article-image">
+                <img src="{% static 'sal_project/assets/photo_3.png' %}" alt="Article 2 image">
+            </div>
+            <div class="article-info">
+                <h2 class="article-title">The Future of AI: How Machine Learning is Revolutionizing Industries</h2>
+                <p class="article-date">November 12, 2024</p>
+            </div>
+        </div>
+        <div class="article">
+            <div class="article-image">
+                <img src="{% static 'sal_project/assets/photo_2.png' %}" alt="Article 3 image">
+            </div>
+            <div class="article-info">
+                <h2 class="article-title">The Impact of 5G on Business: How Faster Networks are Transforming the Way We Work</h2>
+                <p class="article-date">November 12, 2024</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

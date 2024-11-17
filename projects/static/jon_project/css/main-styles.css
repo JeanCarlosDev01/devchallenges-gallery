@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+    --dark-gray: #6c727f;
+    /* Gris oscuro */
+    --light-gray: #e5e7eb;
+    /* Gris claro */
+    --off-white: #f9fafb;
+    /* Blanco cálido */
+    --pure-white: #ffffff;
+    /* Blanco puro */
+    --pure-black: #000000;
+    /* Negro puro */
+    --royal-blue: #284bce;
+    /* Azul real */
+    --charcoal: #394150;
+    /* Carbón */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    padding: 5% 20%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.title-page {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.paragraph-page {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--dark-gray);
+    padding: 20px;
+}
+
+/* Form styles */
+.form-container {
+    background-color: var(--off-white);
+    width: 70%;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 50px 10px var(--light-gray);
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container input {
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+.input-mail {
+    border: 1px solid var(--light-gray);
+    background-color: var(--off-white);
+}
+
+.input-mail:focus {
+    outline: none;
+    border: 1px solid var(--royal-blue);
+}
+
+.btn-submit {
+    background-color: var(--royal-blue);
+    color: var(--pure-white);
+    border: 1px solid var(--royal-blue);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .2s all ease-out;
+}
+
+.btn-submit:hover {
+    background-color: var(--off-white);
+    border: 1px solid var(--royal-blue);
+    color: var(--royal-blue);
+}
+
+.input-mail::placeholder {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--dark-gray);
+    font-weight: bold;
+}
+
+.form-message {
+    font-size: .875rem;
+    color: var(--dark-gray);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.author-info {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 16px;
+    color: rgb(55, 65, 81);
+}
+
+.author-info a {
+    text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 5% 10%;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 5% 8%;
+    }
+    .form-container {
+        width: 100%;
+    }
+}

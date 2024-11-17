@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+:root {
+    --dark-gray-blue: #4D5562;
+    --golden-orange: #E9A23B;
+    --light-smoke: #F8FAFC;
+    --bright-blue: #3662E3;
+    --white: #FFFFFF;
+    --light-gray: #E5E7EB;
+    --charcoal-blue: #121826;
+}
+
+body {
+    overflow: auto;
+}
+
+
+.header-container {
+    position: relative;
+    width: 100%;
+    padding: 3%;
+    border-bottom: 2px solid var(--light-gray);
+    overflow: hidden;
+    text-align: center;
+}
+
+.image-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -10;
+
+}
+
+.image-background img {
+    width: 100%;
+}
+
+.title h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.title p {
+    color:  var(--dark-gray-blue);
+    font-size: 1rem;
+    padding: 0 34%;
+}
+
+.table-container {
+    position: relative;
+    padding: 5%;
+}
+
+.grid-table {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: max-content max-content;
+    grid-template-areas: 
+        'blank free team popular enterprise'
+        'rows cfree cteam cpopular centerprise'
+        'lblank lfree lteam lpopular lenterprise';
+}
+
+.table-head .blank{
+    grid-area: blank;
+}
+
+.table-head .free{
+    grid-area: free;
+}
+
+.table-head .team{
+    grid-area: team;
+}
+
+.table-head .popular{
+    grid-area: popular;
+}
+
+.table-head .enterprise{
+    grid-area: enterprise;
+}
+
+.head {
+    text-align: center;
+    padding: 1.2rem;
+    padding-bottom: 3rem;
+}
+
+.head .name {
+    font-size: 1rem;
+    color: var(--bright-blue);
+    font-weight: bold;
+    padding: .5rem;
+}
+
+.head .price {
+    color: var(--charcoal-blue);
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.head .time {
+    font-size: 1rem;
+    color: var(--dark-gray-blue);
+    padding: .5rem;
+}
+
+.rows {
+    grid-area: rows;
+    background-color: var(--light-smoke);
+    border-bottom-left-radius: 20px;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.cell {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--light-gray);
+    font-size: 1rem;
+}
+
+.no-border {
+    border: none;
+}
+
+.rows .cell {
+    color: var(--charcoal-blue);
+    text-align: start;
+    font-weight: bold;
+}
+
+.cfree {
+    grid-area: cfree;
+}
+
+.cteam {
+    grid-area: cteam;
+}
+
+.cpopular {
+    grid-area: cpopular;
+    background-color: var(--charcoal-blue);
+    color: var(--light-gray);
+}
+
+.cpopular .cell {
+    border-bottom: 2px solid var(--dark-gray-blue)
+}
+
+.centerprise {
+    grid-area: centerprise;
+}
+
+.popular {
+    background-color: var(--charcoal-blue);
+    border-radius: 20px 20px 0 0;
+}
+
+.popular .name, .popular .price, .popular .time {
+    color: var(--white);
+}
+
+.popular .name {
+    background-color: var(--bright-blue);
+    width: max-content;
+    border-radius: 20px;
+    padding: 0 10px;
+    margin: .5rem auto;
+    
+}
+
+.lblank {
+    grid-area: lblank;
+}
+
+.lfree {
+    grid-area: lfree;
+}
+
+.lteam {
+    grid-area: lteam;
+}
+
+.lpopular {
+    grid-area: lpopular;
+}
+
+.lenterprise {
+    grid-area: lenterprise;
+}
+
+.link {
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    padding: 1rem 0;
+}
+
+.link a {
+    text-decoration: none;
+    color: var(--bright-blue);
+}
+
+.link i {
+    font-size: 1.3rem;
+}
+
+.lpopular {
+    background-color: var(--golden-orange);
+    border-radius: 0 0 20px 20px;
+}
+
+.lpopular a {
+    color: var(--white);
+}
+
+
+
+@media (max-width: 1024px) {
+    .grid-table {
+        grid-template-columns: 20% 1fr 1fr 1fr;
+        grid-template-rows: max-content max-content;
+        grid-template-areas: 
+            'blank team popular enterprise'
+            'rows cteam cpopular centerprise'
+            'lblank lteam lpopular lenterprise';
+    }
+
+    .title p {
+        padding: 0 25%;
+    }
+    
+    .free, .cfree, .lfree {
+        display: none;
+    }
+
+    .rows .cell p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .grid-table {
+        grid-template-columns: 20% 1fr 1fr;
+        grid-template-rows: max-content max-content;
+        grid-template-areas: 
+            'blank enterprise popular'
+            'rows centerprise cpopular'
+            'lblank lenterprise lpopular';
+    }
+
+    .title p {
+        padding: 0 10%;
+    }
+    
+    .popular {
+        grid-area: popular;
+    }
+
+    .team, .cteam, .lteam {
+        display: none;
+    }
+}

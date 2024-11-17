@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Added styles sheet -->
+    <link rel="stylesheet" href="{% static 'sfs_project/css/main-styles.css' %}">
+
+    <title>Simple Feature Section</title>
+</head>
+<body>
+    <div class="background-image">
+        <img src="{% static 'sfs_project/assets/Background_image.svg'  %}" alt="Background image">
+    </div>
+    <header class="header-container">
+        <h1 class="header-title">Quality feedbacks for your SaaS products</h1>
+        <p class="header-description">The blocks & components you need</p>
+    </header>
+    <main class="cards-container">
+        <div class="card card-1">
+            <p class="card-icon">✋</p>
+            <h2 class="card-title">Collect Feedback at Multiple Touchpoints</h2>
+            <p class="card-description">Provide a comprehensive understanding of the customer experience.</p>
+            <img class="card-image" src="{% static 'sfs_project/assets/photo_2.png'  %}" alt="photo 1">
+        </div>
+        <div class="card card-2">
+            <p class="card-icon">🥅</p>
+            <h2 class="card-title">Ask Targeted and Specific Questions</h2>
+            <p class="card-description">Avoid vague or open-ended questions that may not yield actionable insights..</p>
+            <img class="card-image" src="{% static 'sfs_project/assets/photo_1.png'  %}" alt="photo 1">
+        </div>
+        <div class="card card-3">
+            <p class="card-icon">💬</p>
+            <h2 class="card-title">Prioritize and Respond to Feedback</h2>
+            <p class="card-description">Communicate the changes or improvements you've made in response to their feedback.</p>
+            <img class="card-image" src="{% static 'sfs_project/assets/photo_3.png'  %}" alt="photo 1">
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="{% static 'jon_project/resources/favicon.ico' %}"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+
+    <link 
+      rel="stylesheet" 
+      href="{% static 'jon_project/css/main-styles.css' %}"
+    />
+
+    <title>Join Our Newsletter | devChallenges.io</title>
+
+  </head>
+  <body>
+    <main class="container">
+      <div class="logo">
+        <img src="{% static 'jon_project/resources/logo.svg' %}" alt="Logo">
+      </div>
+      <h1 class="title-page">Join our newsletter</h1>
+      <p class="paragraph-page">
+        Keep up with our latest collections, exclusive deals, and special offers! We introduce a new collection every week, so stay tuned to snag the hottest items just for you.
+      </p>
+      <div class="form-container">
+        <form action="#">
+          <input type="text" class="input-mail" placeholder="Enter your email address">
+          <input type="submit" class="btn-submit" value="Subscribe now">
+        </form>
+        <p class="form-message">Your email is 100% confidential and won’t send you any spam.</p>
+      </div>
+    </main>
+
+    <!-- 
+    Join our newsletter
+ 
+    Keep up with our latest collections, exclusive deals, and special offers! We introduce a new collection every week, so stay tuned to snag the hottest items just for you.
+ 
+    Enter your email address
+ 
+    Subscribe now
+ 
+    Your email is 100% confidential and won’t send you any spam.
+
+    -->
+
+    <div class="author-info">
+      Coded by <a href="https://github.com/JeanCarlosDev01">Jean Carlos Ordoñez</a> | Challenge by
+      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
+        >devChallenges.io</a
+      >.
+    </div>
+  </body>
+</html>

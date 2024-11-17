@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block main %}
+{% if project_list %}
+{% for project in project_list %}
+<div class="card shadow" style="width: 18rem;">
+    {% if project.image %}
+    <img src="{{ project.image.url }}" class="card-img-top object-fit-cover " height="200px" alt="Project Image">
+    {% else %}
+    <img src="https://static.vecteezy.com/system/resources/previews/019/551/975/non_2x/error-page-page-not-found-icon-in-line-style-design-isolated-on-white-background-editable-stroke-vector.jpg" class="card-img-top object-fit-cover " height="200px" alt="Image not found">
+    {% endif %}
+    <div class="card-body">
+        <h5 class="card-title">{{ project.name }}</h5>
+        <p class="card-text"></p>
+        <div class="d-flex justify-content-center gap-3">
+            {% if project.github %}
+            <a href="{{ project.github }}" class="btn btn-outline-primary"><i class="bi bi-github"></i></a>
+            {% endif %}
+            {% if project.deploy %}
+            <a href="{{ project.deploy }}" class="btn btn-outline-primary"><i class="bi bi-box-arrow-up-right"></i></a>
+            {% endif %}
+            {% if project.devchallenges %}             
+            <a href="{{ project.devchallenges }}" class="btn btn-outline-primary">Devchallenges</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% else %}
+<p class="p-2 bg-white mx-auto rounded-1 shadow"><i class="bi bi-exclamation-triangle"></i> No se encontraron proyectos</p>
+{% endif %}
+{% endblock %}
