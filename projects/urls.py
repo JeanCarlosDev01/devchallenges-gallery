@@ -7,5 +7,5 @@ urlpatterns = [
     path('meet-the-team-section/', mtts_project, name='mtts_project'),
     path('simple-feature-section/', sfs_project, name='sfs_project'),
     path('simple-article-listing/', sal_project, name='sal_project'),
-    path('join-our-newsletter/', jon_project, name='sal_project'),
+    path('join-our-newsletter/', jon_project, name='jon_project'),
 ]
